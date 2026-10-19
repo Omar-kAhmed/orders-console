@@ -1,0 +1,17 @@
+{
+  "name": "orders-console",
+  "version": "1.0.0",
+  "description": "SARH Orders Console - High Performance Full Stack Technical Assessment",
+  "scripts": {
+    "dev": "concurrently -n \"API,WEB\" -c \"blue,green\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "test": "npm run test:duplicate --prefix backend",
+    "test:duplicate": "npm run test:duplicate --prefix backend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
